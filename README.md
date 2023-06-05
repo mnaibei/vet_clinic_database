@@ -97,7 +97,7 @@ After you're finished please remove all the comments and instructions!
 
 - **[Tables with pet data]**
 - **[Unique Private key]**
-<!-- - **[key_feature_3]** -->
+- **[Queries to get back data from the table]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
