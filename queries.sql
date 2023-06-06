@@ -12,12 +12,17 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
 BEGIN;
 UPDATE animals SET species = 'unspecified';
+SELECT species from animals; -- verify that change was made
 ROLLBACK;
+SELECT species from animals;
+
 
 BEGIN;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+SELECT species from animals;
 COMMIT;
+SELECT species from animals;
 
 BEGIN;
 DELETE FROM animals;
