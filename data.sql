@@ -32,8 +32,8 @@ INSERT INTO species (name) VALUES
 
 -- PET ID 
 BEGIN;
-UPDATE animals SET species_id = 1 WHERE name LIKE '%mon';
-UPDATE animals SET species_id = 2 WHERE species_id IS NULL;
+UPDATE animals SET species_id = 'Digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species_id = 'Pokemon' WHERE species_id IS NULL;
 COMMIT;
 SELECT * FROM animals;
 
