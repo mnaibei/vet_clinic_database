@@ -8,3 +8,25 @@ CREATE TABLE animals(
   neutered BOOLEAN,  
   weight_kg DECIMAL 
   );
+
+
+-- Day 3
+CREATE TABLE owners(
+  id SERIAL NOT NULL,
+  full_name VARCHAR(200),
+  age INT,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE species(
+  id SERIAL NOT NULL,
+  name VARCHAR(200),
+  PRIMARY KEY(id)
+);
+
+ALTER TABLE animals DROP species;
+
+-- ALTER TABLE animals ADD species_id INT REFERENCES species(id);
+ALTER TABLE animals ADD species_id VARCHAR(255) REFERENCES species(name);
+
+ALTER TABLE animals ADD owner_id INT REFERENCES owners(id);
