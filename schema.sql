@@ -73,3 +73,8 @@ CREATE TABLE visits(
   date DATE,
   PRIMARY KEY (id)
 );
+
+-- WEEK 2 
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
